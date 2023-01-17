@@ -20,7 +20,7 @@ class Bot {
 
 
         if (gamestate.rounds.length >= 1 && gamestate.rounds[gamestate.rounds.length - 1].p1 === gamestate.rounds[gamestate.rounds.length - 1].p2 && count1 < 100) {
-            return 'D';
+            return ['R', 'P', 'S', 'D'][randomIndex2];
         }
         else if (count1 >= 100 && count2 >= 100) {
             return ['R', 'P', 'S'][randomIndex3];
@@ -29,10 +29,10 @@ class Bot {
             return ['R', 'P', 'S'][randomIndex3];
         }
         else if (count2 >= 100) {
-            return ['R', 'P', 'S', 'D'][randomIndex2];
+            return ['R', 'P', 'S'][randomIndex3];
         }
         else {
-            return ['R', 'P', 'S', 'D'][randomIndex2];
+            return ['R', 'P', 'S'][randomIndex3];
         }
     }
 }
